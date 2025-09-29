@@ -2,7 +2,7 @@
 
 # Emergence Engine MCP
 
-[![Part of STARSYSTEM](https://img.shields.io/badge/Part%20of-STARSYSTEM-blue)](https://github.com/sancovp/starsystem-metarepo)
+[![Part of STARSYSTEM](https://img.shields.io/badge/Part%20of-STARSYSTEM-yellow)](https://github.com/sancovp/starsystem-metarepo)
 
 Track progress through the 3-pass systematic thinking methodology using the System Design DSL notation.
 
