@@ -46,6 +46,12 @@ mcp = FastMCP("Emergence Engine")
 tracker = ThreePassTracker()
 
 
+def _get_3pass_base_path() -> Path:
+    """Get the base path for the bundled 3-pass system files"""
+    package_dir = Path(__file__).parent / "emergence_engine"
+    return package_dir / "3_pass_autonomous_research_system_v01"
+
+
 @mcp.tool
 def core_run(
     domain: str = Field(description="The domain you're applying 3-pass thinking to (e.g., 'Autobiography System')"),
@@ -328,8 +334,7 @@ def update_3pass_system() -> str:
         import shutil
         
         # Use bundled files from package
-        package_dir = Path(__file__).parent / "emergence_engine"
-        repo_path = package_dir / "3_pass_autonomous_research_system_v01"
+        repo_path = _get_3pass_base_path()
         
         # Remove old copy if exists
         if repo_path.exists():
@@ -363,8 +368,7 @@ def browse_3pass_system(
     """
     try:
         # Use bundled files from package
-        package_dir = Path(__file__).parent / "emergence_engine"
-        base_path = package_dir / "3_pass_autonomous_research_system_v01"
+        base_path = _get_3pass_base_path()
         if not base_path.exists():
             return "❌ 3-pass system not found. Use `update_3pass_system()` first."
         
@@ -414,8 +418,7 @@ def read_3pass_file(
     """
     try:
         # Use bundled files from package
-        package_dir = Path(__file__).parent / "emergence_engine"
-        base_path = package_dir / "3_pass_autonomous_research_system_v01"
+        base_path = _get_3pass_base_path()
         if not base_path.exists():
             return "❌ 3-pass system not found. Use `update_3pass_system()` first."
         
@@ -502,8 +505,7 @@ def get_master_prompt() -> str:
     """
     try:
         # Use bundled files from package
-        package_dir = Path(__file__).parent / "emergence_engine"
-        base_path = package_dir / "3_pass_autonomous_research_system_v01"
+        base_path = _get_3pass_base_path()
         master_prompt_path = base_path / "system_design_instructions" / "MASTER_PROMPT.md"
         
         if not master_prompt_path.exists():
@@ -521,6 +523,10 @@ Expected location: <package>/emergence_engine/3_pass_autonomous_research_system_
         return f"❌ Error reading master prompt: {str(e)}\\n\\nTraceback:\\n{traceback.format_exc()}"
 
 
-if __name__ == "__main__":
-    # Run the MCP server
+def main():
+    """Main entry point for the MCP server"""
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()

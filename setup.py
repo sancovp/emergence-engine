@@ -13,4 +13,9 @@ setup(
     install_requires=[
         "pydantic>=2.0.0",
     ],
+    entry_points={
+        "console_scripts": [
+            "emergence-engine-mcp=emergence_engine.mcp_server:main",
+        ],
+    },
 )
