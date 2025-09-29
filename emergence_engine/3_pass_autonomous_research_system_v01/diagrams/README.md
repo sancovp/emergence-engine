@@ -16,8 +16,10 @@ These diagrams provide the essential topology map for navigating the compound in
 ## Purpose:
 These diagrams should be part of LLM system prompts to provide the topology map needed to make high-level navigation decisions in the compound intelligence ecosystem.
 
-## Integration:
 - Part of EmergenceEngine MCP via view_mechanics() tool
 - Essential context for understanding where you are in the overall flow
 - Decision tree for knowing which tool to reach for next
+
+## Integration:
 - **Copy the text from [here](https://github.com/sancovp/emergence-engine/blob/master/emergence_engine/3_pass_autonomous_research_system_v01/diagrams/00_complete_system_topology.md) to the system prompt of the agent you are using.**
+
