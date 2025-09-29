@@ -53,12 +53,12 @@ Show overall progress and what's next.
 - Shows: "Pass 2 of 3, Phase 4 of 7", what files should exist, what's next
 
 ### `reset_journey(starlog_path)`
-Reset journey back to the beginning (L0P1W[0](0)).
+Reset journey back to the beginning (`L0P1W[0](0)`).
 
 ## DSL Notation
 
 The system uses formal System Design DSL notation:
-- **L₀P₁W[0](3)** = Layer 0, Pass 1, Workflow Phase 3
+- **`L₀P₁W[0](3)`** = Layer 0, Pass 1, Workflow Phase 3
 - **Layers**: L₀, L₁, L₂... (recursive application)
 - **Passes**: P₁ (Conceptualize), P₂ (Generally Reify), P₃ (Specifically Reify)  
 - **Phases**: 0-6 (AbstractGoal → SystemsDesign → Architecture → DSL → Topology → EngineeredSystem → FeedbackLoop)
