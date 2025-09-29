@@ -92,6 +92,6 @@ State is persisted to JSON files using starlog paths as identifiers:
 
 Designed to integrate with:
 - **STARLOG**: Uses starlog paths as unique identifiers
-- **PayloadDiscovery**: Can serve as waypoint navigation system  
-- **GIINT**: Compatible with respond() workflow for complex implementations
+- **PayloadDiscovery**: Can be combined with waypoint (includes set of MD files in package) 
+- **GIINT**: Compatible with respond() workflow for complex implementations through blueprint configs
 - **STARSHIP**: Flight configs can use these tools for 3-pass missions
