@@ -11,7 +11,11 @@ An auto-prompter and state tracker for the 3-pass systematic thinking methodolog
 It's not currently on PyPI but it is installable if you download the package.
 
 ```bash
-pip install /path/to/emergence_engine
+# Clone the repository
+git clone https://github.com/sancovp/emergence-engine.git
+
+# Install locally
+pip install ./emergence-engine
 ```
 
 ## MCP Configuration
