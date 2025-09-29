@@ -340,7 +340,11 @@ def get_contextual_prompt(pass_num: int, phase: int, domain: str) -> str:
 class MethodologyExplorer:
     """Simple numbered navigation for 3-pass methodology files"""
     
-    def __init__(self, repo_path: str = "/tmp/3_pass_autonomous_research_system_v01"):
+    def __init__(self, repo_path: Optional[str] = None):
+        if repo_path is None:
+            # Use bundled files from package
+            package_dir = Path(__file__).parent
+            repo_path = str(package_dir / "3_pass_autonomous_research_system_v01")
         self.repo_path = Path(repo_path)
         self.current_path = Path("")  # Relative to repo_path
         self._page_size = 10

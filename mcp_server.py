@@ -327,7 +327,9 @@ def update_3pass_system() -> str:
         import subprocess
         import shutil
         
-        repo_path = Path("/tmp/3_pass_autonomous_research_system_v01")
+        # Use bundled files from package
+        package_dir = Path(__file__).parent / "emergence_engine"
+        repo_path = package_dir / "3_pass_autonomous_research_system_v01"
         
         # Remove old copy if exists
         if repo_path.exists():
@@ -360,7 +362,9 @@ def browse_3pass_system(
     Returns directory listing like 'ls' command.
     """
     try:
-        base_path = Path("/tmp/3_pass_autonomous_research_system_v01")
+        # Use bundled files from package
+        package_dir = Path(__file__).parent / "emergence_engine"
+        base_path = package_dir / "3_pass_autonomous_research_system_v01"
         if not base_path.exists():
             return "❌ 3-pass system not found. Use `update_3pass_system()` first."
         
@@ -409,7 +413,9 @@ def read_3pass_file(
     Returns file contents like 'cat' command.
     """
     try:
-        base_path = Path("/tmp/3_pass_autonomous_research_system_v01")
+        # Use bundled files from package
+        package_dir = Path(__file__).parent / "emergence_engine"
+        base_path = package_dir / "3_pass_autonomous_research_system_v01"
         if not base_path.exists():
             return "❌ 3-pass system not found. Use `update_3pass_system()` first."
         
@@ -495,13 +501,15 @@ def get_master_prompt() -> str:
         Complete master prompt text with all passes, phases, and guidance
     """
     try:
-        base_path = Path("/tmp/3_pass_autonomous_research_system_v01")
+        # Use bundled files from package
+        package_dir = Path(__file__).parent / "emergence_engine"
+        base_path = package_dir / "3_pass_autonomous_research_system_v01"
         master_prompt_path = base_path / "system_design_instructions" / "MASTER_PROMPT.md"
         
         if not master_prompt_path.exists():
             return """❌ Master prompt file not found. Use `update_3pass_system()` first.
             
-Expected location: /tmp/3_pass_autonomous_research_system_v01/system_design_instructions/MASTER_PROMPT.md"""
+Expected location: <package>/emergence_engine/3_pass_autonomous_research_system_v01/system_design_instructions/MASTER_PROMPT.md"""
         
         with open(master_prompt_path, 'r', encoding='utf-8') as f:
             content = f.read()
