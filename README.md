@@ -4,7 +4,7 @@
 
 # Emergence Engine MCP
 
-Track progress through the 3-pass systematic thinking methodology using the System Design DSL notation.
+Track progress through the 3-pass systematic thinking methodology for guiding LLM specification-making and conceptualization using an auto-prompter with System Design DSL notation.
 
 ## Installation
 
