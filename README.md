@@ -8,6 +8,8 @@ Track progress through the 3-pass systematic thinking methodology for guiding LL
 
 ## Installation
 
+It's not currently on PyPI but it is installable if you download the package.
+
 ```bash
 pip install /path/to/emergence_engine
 ```
