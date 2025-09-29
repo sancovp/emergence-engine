@@ -6,6 +6,19 @@
 
 An auto-prompter and state tracker for the 3-pass systematic thinking methodology for guiding LLM specification-making and conceptualization.
 
+## Role in the Compound Intelligence System
+
+Emergence Engine is the **systematic thinking engine** in the compound intelligence toolkit. It provides:
+- 3-pass methodology guidance (expanded to 9 passes across 3 layers)
+- State tracking through the ontological → architectural → implementation flow
+- Auto-prompting to keep agents on track
+
+Works alongside:
+- **STARSHIP**: Orchestrates sessions and workflows
+- **STARLOG**: Maintains context and project history
+- **GIINT**: Manages project structure and tasks
+- **PayloadDiscovery**: Knowledge base integration
+
 ## Installation
 
 It's not currently on PyPI but it is installable if you download the package.
@@ -36,23 +49,30 @@ Add to your MCP server configuration:
 
 ## System Prompt Integration
 
-**Copy the text from [the complete system topology](https://github.com/sancovp/emergence-engine/blob/master/emergence_engine/3_pass_autonomous_research_system_v01/diagrams/00_complete_system_topology.md) to the system prompt of the agent you are using.**
+**CRITICAL**: Before using Emergence Engine tools, you MUST integrate the system topology into your agent's system prompt.
+
+1. Copy the **[Complete Compound Intelligence System Topology](https://github.com/sancovp/emergence-engine/blob/master/emergence_engine/3_pass_autonomous_research_system_v01/diagrams/00_complete_system_topology.md)**
+2. Add it to your agent's system prompt/instructions
+3. This enables the agent to understand:
+   - The biphasic conversation pattern (Dev→Implement)
+   - Where they are in the 9-pass nested structure
+   - How tools integrate in the compound intelligence system
+
+⚠️ **Without this integration, the agent won't understand the navigation context for the 3-pass methodology.**
 
 ## Available Tools
 
 ### `core_run(domain, starlog_path)`
-Sets up basic 3-pass session with minimal guidance.
-- **domain**: The domain you're applying 3-pass thinking to (e.g., "Autobiography System")
-- **starlog_path**: STARLOG project path as unique identifier
+Initiates a 3-pass thinking session for a domain. This starts Layer 0, Pass 1 - determining "What IS" your domain ontologically.
 
 ### `expanded_run(domain, starlog_path)`  
-Full step-by-step guidance with detailed prompts for each phase.
-- Provides comprehensive instructions, examples, and explanations
-- Same parameters as core_run
+Full guided journey through all 9 passes (3 layers × 3 passes). Includes:
+- Layer 0: Conceptualize (What IS it?)
+- Layer 1: Generally Reify (How do we BUILD these?)
+- Layer 2: Specifically Reify (Build THIS generator)
 
 ### `get_next_phase(starlog_path)`
-Advance to next phase and get appropriate prompt for current pass + phase.
-- Returns contextual guidance like: "You're on Pass 2, Phase 3. Now focus on DSL for your generation system..."
+Navigate through the 9-pass structure. Returns contextual prompts based on your position in the topology (e.g., "L₁P₂: How do we BUILD systems that BUILD?")
 
 ### `get_status(starlog_path)`
 Show overall progress and what's next.
