@@ -95,6 +95,14 @@ The system uses formal System Design DSL notation:
 2. **Pass 2 (Generally Reify)**: How do we MAKE things in this domain? (System building)
 3. **Pass 3 (Specifically Reify)**: How do we make THIS specific instance? (Concrete creation)
 
+## The "Traditional" Expanded Run 9-Pass Structure
+
+| Layer | Pass 1 | Pass 2 | Pass 3 |
+|-------|--------|--------|--------|
+| **L0: Conceptualize** | What IS "What IS it?" | How DETERMINE "What IS it?" | Determine what THIS IS |
+| **L1: Generally Reify** | What IS "system building?" | How BUILD systems that BUILD? | Build THIS architecture |
+| **L2: Specifically Reify** | What IS "this implementation?" | How BUILD implementations? | Build THIS generator |
+
 ## Example Usage
 
 ```python
