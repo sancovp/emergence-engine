@@ -21,5 +21,5 @@ These diagrams should be part of LLM system prompts to provide the topology map 
 - Essential context for understanding where you are in the overall flow
 - Decision tree for knowing which tool to reach for next
 
-### System Prompt
+## System Prompt:
 **Add to System Prompt**: Add the text from [here](https://github.com/sancovp/emergence-engine/blob/master/emergence_engine/3_pass_autonomous_research_system_v01/diagrams/00_complete_system_topology.md) to the system prompt of the agent you are using.
