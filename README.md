@@ -36,7 +36,7 @@ Add to your MCP server configuration:
 
 ## System Prompt Integration
 
-**Copy the text from [here](https://github.com/sancovp/emergence-engine/blob/master/emergence_engine/3_pass_autonomous_research_system_v01/diagrams/00_complete_system_topology.md) to the system prompt of the agent you are using.**
+**Copy the text from [the complete system topology](https://github.com/sancovp/emergence-engine/blob/master/emergence_engine/3_pass_autonomous_research_system_v01/diagrams/00_complete_system_topology.md) to the system prompt of the agent you are using.**
 
 ## Available Tools
 
