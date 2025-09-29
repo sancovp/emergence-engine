@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "emergence-engine": {
+      "command": "python3",
+      "args": ["/tmp/core_libraries_to_publish/emergence_engine/mcp_server.py"],
+      "env": {}
+    }
+  }
+}

@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+emergence_engine/MASTER_PROMPT.md
+emergence_engine/__init__.py
+emergence_engine/core.py
+emergence_engine.egg-info/PKG-INFO
+emergence_engine.egg-info/SOURCES.txt
+emergence_engine.egg-info/dependency_links.txt
+emergence_engine.egg-info/requires.txt
+emergence_engine.egg-info/top_level.txt
