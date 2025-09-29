@@ -9,7 +9,7 @@ Track progress through the 3-pass systematic thinking methodology using the Syst
 ## Installation
 
 ```bash
-pip install /tmp/core_libraries_to_publish/emergence_engine
+pip install /path/to/emergence_engine
 ```
 
 ## MCP Configuration
@@ -20,8 +20,9 @@ Add to your MCP server configuration:
 {
   "mcpServers": {
     "emergence-engine": {
-      "command": "python3",
-      "args": ["/path/to/emergence_engine/mcp_server.py"]
+      "type": "stdio",
+      "command": "emergence-engine-mcp",
+      "args": []
     }
   }
 }
